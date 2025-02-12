@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "bmg"
+version = "0.1.0"
+description = ""
+authors = ["Danut Matei <danut.matei@stxnext.pl>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+streamlit = "^1.42.0"
+openai = "^1.61.1"
+pypdf2 = "^3.0.1"
+python-dotenv = "^1.0.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
