@@ -27,6 +27,10 @@ Offer recommendations and corrections if necessary, especially if incorrect word
 ambiguous formulations are used.
 Make sure the table is properly formatted and doesn't have any missing or extra columns
 or rows.
+
+Finally, at the end of your response, analyze and make some comments regarding the
+confidence level of the person speaking and make some recommendations on errors, tonality
+and word slection.
 """
 
 
@@ -65,7 +69,7 @@ st.title("Streamlit Demo")
 
 uploaded_audio = st.file_uploader("Upload an audio file", type=["wav"])
 uploaded_pdf = st.file_uploader("Upload a PDF script", type=["pdf"])
-prompt_input = st.text_area("Enter a prompt for OpenAI", value=PROMPT)
+prompt_input = st.text_area("Enter a prompt", value=PROMPT)
 
 if st.button("Process"):
     if uploaded_pdf and uploaded_audio:
@@ -75,10 +79,10 @@ if st.button("Process"):
         with st.spinner("Loading audio file..."):
             audio = uploaded_audio.read()
 
-        with st.spinner("Calling OpenAI API..."):
+        with st.spinner("AI analysis..."):
             response = call_openai_api(prompt_input, script_text, audio)
 
-        st.success("OpenAI Response:")
+        st.success("AI response:")
         st.write_stream(response)
 
     else:
