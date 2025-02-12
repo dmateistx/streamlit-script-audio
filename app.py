@@ -28,7 +28,8 @@ ambiguous formulations are used.
 Make sure the table is properly formatted and doesn't have any missing or extra columns
 or rows.
 
-Finally, at the end of your response, analyze and make some comments regarding the
+Finally, at the end of your response, in a separate section from the previous ones,
+analyze and make some comments regarding the
 confidence level of the person speaking and make some recommendations on errors, tonality
 and word slection.
 """
