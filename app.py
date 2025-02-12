@@ -69,7 +69,7 @@ st.title("Streamlit Demo")
 
 uploaded_audio = st.file_uploader("Upload an audio file", type=["wav"])
 uploaded_pdf = st.file_uploader("Upload a PDF script", type=["pdf"])
-prompt_input = st.text_area("Enter a prompt", value=PROMPT)
+prompt_input = PROMPT
 
 if st.button("Process"):
     if uploaded_pdf and uploaded_audio:
